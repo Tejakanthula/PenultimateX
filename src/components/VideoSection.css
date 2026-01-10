@@ -1,0 +1,13 @@
+.video-section {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.digital-video {
+  width: 100%;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  
+}

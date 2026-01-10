@@ -1,0 +1,92 @@
+.second-navbar {
+  width: 100%;
+  height: 50px;
+  padding: 14px 100px;
+  position: sticky;
+  top: 70px;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  align-items: center;
+  
+}
+
+.nav-logo.tab-0 {
+  height: 120px;
+  margin-top: 50px;
+  margin-left: -80px;
+}
+.nav-logo.tab-1{
+  height: 120px;
+  margin-top: 50px;
+  margin-left: -80px;
+}
+
+.nav-logo.tab-2 {
+  height: 120px;
+  margin-top: 50px;
+ margin-left: -75px;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-right ul {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+}
+/* Only for Penultimate X (tab 0) — move buttons down */
+.second-navbar.tab-0 .navbar-right ul {
+  margin-top: 90px;
+}
+.second-navbar.tab-1 .navbar-right ul{
+  margin-top: 90px;
+}
+
+.second-navbar.tab-2 .navbar-right ul {
+  margin-top: 100px;
+}
+.navbar-right {
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+.nav-btn{
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px; 
+  font-weight: 500;
+}
+ .nav-btn:hover {
+  color: #111111;
+}
+
+
+@media (max-width: 768px) {
+  .second-navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
+    align-items: flex-start;
+  }
+
+  .nav-logo {
+    height: 60px;
+    margin-bottom: 8px;
+  }
+
+  .navbar-right ul {
+    display: none; /* hide the menu links */
+  }
+}
