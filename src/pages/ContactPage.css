@@ -1,0 +1,244 @@
+/* ✅ REMOVE TOP SPACE COMPLETELY */
+.contact-page {
+  margin-top: -110px;
+  padding-top: 0px;
+}
+
+/* ✅ Make layout start from top immediately */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 70px;
+  padding: 30px 60px 80px;
+}
+
+.contact-left {
+  flex: 1;
+}
+
+.contact-title {
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.contact-right {
+  flex: 1.4;
+}
+
+.contact-form {
+  width: 100%;
+}
+
+.form-row {
+  display: flex;
+  gap: 30px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 22px;
+  flex: 1;
+}
+
+.form-group label {
+  font-size: 18px;
+  color: #333;
+}
+
+.form-group label span {
+  color: red;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 13px 16px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.form-group textarea {
+  resize: none;
+}
+
+.form-group.full {
+  width: 100%;
+}
+
+.submit-btn {
+  margin-top: 15px;
+  padding: 13px 22px;
+  border: none;
+  background: #111;
+  color: white;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #333;
+}
+
+/* ✅ RESPONSIVE FORM */
+@media (max-width: 1024px) {
+  .contact-page {
+    margin-top: -80px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    padding: 30px 25px 60px;
+    gap: 40px;
+  }
+
+  .contact-title {
+    font-size: 48px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+}
+
+/* ==========================================================
+   ✅ CONTACT FOOTER (UNIQUE ✅ NOT AFFECTING HOME FOOTER)
+   ========================================================== */
+
+.contact-footer-section {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  background: #ffffff;
+  padding: 100px 0 120px;
+  box-sizing: border-box;
+}
+
+.contact-footer-line-top {
+  width: 100%;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.15);
+  margin-bottom: 60px;
+}
+
+.contact-footer-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 60px;
+  box-sizing: border-box;
+}
+
+.contact-footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.4fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.contact-footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-footer-label {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.contact-footer-big {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #000;
+}
+
+.contact-footer-link {
+  font-size: 20px;
+  font-weight: 400;
+  color: #000;
+  cursor: pointer;
+}
+
+.contact-footer-link:hover {
+  opacity: 0.7;
+}
+
+.contact-footer-contact-btn {
+  margin-top: 18px;
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+
+  padding: 14px 26px;
+  border-radius: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  background: transparent;
+  cursor: pointer;
+
+  font-size: 18px;
+  font-weight: 400;
+  color: #000;
+
+  transition: all 0.25s ease;
+}
+
+.contact-footer-contact-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.contact-footer-btn-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.contact-footer-arrow-img {
+  width: 28px;
+  height: auto;
+  display: block;
+}
+
+/* ✅ Responsive Footer */
+@media (max-width: 1024px) {
+  .contact-footer-inner {
+    padding: 0 30px;
+  }
+
+  .contact-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .contact-footer-big {
+    font-size: 18px;
+  }
+
+  .contact-footer-link {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-footer-inner {
+    padding: 0 18px;
+  }
+
+  .contact-footer-section {
+    padding: 70px 0 90px;
+  }
+
+  .contact-footer-contact-btn {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+}

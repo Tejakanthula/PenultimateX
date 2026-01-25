@@ -6,30 +6,21 @@
   transition: background-color 0.4s ease;
 }
 
-/* Base content spacing */
+/* ✅ Base content spacing (FIX ALIGNMENT CENTER) */
 .content {
-  padding: 80px 100px;
+  padding: 70px 60px;
   min-height: calc(100vh - 150px);
-  margin-left: -70px;
+  margin-left: 0px;
   transition: all 0.4s ease;
 }
 
 /* Apply custom gap per tab */
-.content.tab-0 {  /* Penultimate X */
-  margin-top: 80px; /* maintain visible gap like screenshot 1 */
+.content.tab-0 {
+  margin-top: 80px;
 }
-
 .content.tab-1,
-.content.tab-2 {  /* Penultimate V and C */
-  margin-top: 80px; /* same visual spacing for consistency */
-}
-
-
-.main-title {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  transition: color 0.4s ease;
+.content.tab-2 {
+  margin-top: 80px;
 }
 
 .main-text {
@@ -47,5 +38,1821 @@
   .main-text {
     padding: 0 20px;
     text-align: center;
+    font: 20px;
   }
 }
+
+/* =============================
+   Impact Section
+   ============================= */
+
+.impact-section {
+  margin-top: 140px;
+  padding-bottom: 120px;
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.impact-title {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 100px;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  line-height: 1.05;
+  margin-bottom: 34px;
+}
+
+.impact-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  line-height: 1.75;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .impact-title {
+    font-size: 48px;
+  }
+
+  .impact-section {
+    margin-top: 100px;
+    padding-bottom: 80px;
+  }
+
+  .impact-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .impact-title {
+    font-size: 55px;
+    white-space: normal;
+  }
+  .impact-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .impact-title {
+    font-size: 40px;
+  }
+}
+
+/* =============================
+   Work Grid
+   ============================= */
+
+.work-grid {
+  margin-top: 120px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+  margin-bottom: 120px;
+}
+
+.work-card {
+  background: transparent;
+}
+
+.work-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.work-image img {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.work-card-1 .work-image img {
+  height: 450px;
+}
+
+.work-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.work-image:hover::after {
+  opacity: 1;
+}
+
+.work-image:hover img {
+  transform: scale(1.04);
+}
+
+.work-meta {
+  margin-top: 18px;
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.work-meta-title {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #111;
+}
+
+.work-meta-sub {
+  font-size: 18px;
+  font-weight: 300;
+  color: #9c9c9c;
+}
+
+@media (max-width: 900px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-image img {
+    height: 500px;
+  }
+
+  .work-card-1 .work-image img {
+    height: 300px;
+  }
+}
+
+/* ==========================================================
+   ✅ FULL WIDTH BLACK WRAPPER
+   ========================================================== */
+
+.black-fullwidth {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  background: #000;
+  margin-top: 90px;
+  padding: 0;
+}
+
+.black-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0px 60px;
+}
+
+@media (max-width: 1024px) {
+  .black-inner {
+    padding: 60px 30px;
+  }
+}
+
+/* ==========================================================
+   WHAT WE DO SECTION (BLACK)
+   ========================================================== */
+
+.whatwedo-section {
+  background: transparent;
+  color: #fff;
+  margin-top: 0px;
+  padding-top: 60px;
+  padding-bottom: 0px;
+}
+
+.whatwedo-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.whatwedo-heading {
+  font-size: 40px;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+}
+
+.whatwedo-list {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.whatwedo-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  padding: 70px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  transition: transform 0.35s ease;
+}
+
+.whatwedo-row:hover {
+  transform: scale(1.02);
+}
+
+.whatwedo-left {
+  font-size: 56px;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+}
+
+.whatwedo-right {
+  font-size: 18px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+@media (max-width: 1024px) {
+  .whatwedo-row {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 50px 0;
+  }
+
+  .whatwedo-left {
+    font-size: 38px;
+  }
+
+  .whatwedo-heading {
+    font-size: 30px;
+  }
+}
+
+/* ==========================================================
+   SERVICES SECTION
+   ========================================================== */
+
+.services-section {
+  background: transparent;
+  padding: 90px 0px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px;
+}
+
+.services-title {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.services-line {
+  margin-top: 16px;
+  width: 26px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.services-items {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.services-item {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 16px;
+  font-weight: 300;
+}
+
+@media (max-width: 1024px) {
+  .services-section {
+    padding: 60px 0px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+/* ==========================================================
+   ✅ MARQUEE
+   ========================================================== */
+
+.marquee-wrap {
+  background: transparent;
+  overflow: hidden;
+  padding: 70px 0;
+}
+
+.marquee-track {
+  display: flex;
+  width: fit-content;
+  white-space: nowrap;
+  animation: marquee-move 50s linear infinite;
+}
+
+.marquee-text {
+  font-size: 200px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  margin-right: 80px;
+}
+
+@keyframes marquee-move {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .marquee-text {
+    font-size: 70px;
+    margin-right: 40px;
+  }
+}
+
+/* ==========================================================
+   ✅ PRINCIPLES SECTION
+   ========================================================== */
+/* ==========================================================
+   ✅ PRINCIPLES SECTION ✅✅ FIXED LIKE YOUR 2nd IMAGE
+   ========================================================== */
+
+.principles-section {
+  background: transparent;
+  color: #fff;
+  padding: 90px 0px 30px;
+}
+
+.principles-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+.principles-bigtext {
+  max-width: 740px;
+  font-size: 40px;
+  line-height: 1.2;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  font-family: serif;
+}
+
+.principles-link {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  transition: opacity 0.3s ease;
+}
+
+.principles-link:hover {
+  opacity: 0.7;
+}
+
+.principles-grid {
+  display: flex;
+  width: 100%;
+  gap: 0px;
+}
+
+/* ✅ Card base */
+.principle-card {
+  position: relative;
+  flex: 1;
+  min-height: 380px;
+  padding: 60px 24px 55px;
+  overflow: hidden;
+  cursor: pointer;
+
+  transition: flex 0.55s ease, background 0.3s ease;
+  will-change: flex;
+}
+
+/* ✅ Divider line */
+.principle-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 22%;
+  bottom: 14%;
+  width: 1px;
+  background: rgba(107, 122, 255, 0.9);
+}
+
+.principle-card:first-child::before {
+  display: none;
+}
+
+/* ✅ IMPORTANT FIX: smooth expand but NOT too much */
+.principle-card:hover {
+  flex: 2.4; /* ✅ earlier it was 3.75 (too big) */
+  background: rgba(255, 255, 255, 0.04);
+  z-index: 10;
+}
+
+/* ✅ Number */
+.principle-num {
+  position: absolute;
+  top: 35px;
+  left: 20px;
+  font-size: 20px;
+  font-family: serif;
+  opacity: 0.9;
+}
+
+/* ✅ Title + Desc at bottom like your 2nd image */
+.principle-bottomrow {
+  position: absolute;
+  bottom: 55px;
+  left: 24px;
+  right: 24px;
+
+  display: flex;
+  align-items: flex-end;
+  gap: 34px;
+}
+
+/* ✅ Title (always bottom) */
+/* .principle-title {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 0;
+
+  width: 230px; 
+  min-height: calc(1.25em * 2); 
+  white-space: normal;
+} */
+
+.principle-title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.25;
+  margin: 0;
+
+  width: auto;          /* ✅ increase width */
+  white-space: nowrap;   /* ✅ force single line */
+}
+
+
+/* ✅ Desc beside title, stable alignment */
+.principle-desc {
+  flex: 1;
+  max-width: 360px;
+
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.55);
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.principle-card:hover .principle-desc {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/* ✅ Tablet/Mobile responsive */
+@media (max-width: 1200px) {
+  .principles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+
+  .principle-card {
+    flex: unset;
+    border: 1px solid rgba(107, 122, 255, 0.35);
+    border-radius: 14px;
+    padding: 40px 22px;
+    min-height: auto;
+  }
+
+  .principle-card::before {
+    display: none;
+  }
+
+  .principle-card:hover {
+    flex: unset;
+  }
+
+  .principle-bottomrow {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .principle-title {
+    width: auto;
+  }
+
+  .principle-desc {
+    opacity: 1 !important;
+    transform: none !important;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .principles-section {
+    padding: 60px 0px 20px;
+  }
+
+  .principles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .principles-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .principles-bigtext {
+    font-size: 28px;
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+/* ==========================================================
+   ✅ VENTURES HERO SECTION
+   ========================================================== */
+
+.ventures-hero {
+  margin-top: 0px;
+  text-align: center;
+  padding: 0px 0 0px;
+}
+
+.ventures-hero-title {
+  font-size: 120px;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  line-height: 1.05;
+  margin: 0;
+}
+
+.ventures-hero-highlight {
+  color: #8fd1ff;
+}
+
+.ventures-hero-subtitle {
+  margin-top: 30px;
+  font-size: 24px;
+  font-weight: 350;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.ventures-hero-btn {
+  margin-top: 40px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  padding: 14px 24px;
+  border-radius: 14px;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.ventures-hero-arrow {
+  width: 28px;
+  height: auto;
+  display: block;
+}
+
+.ventures-hero-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ==========================================================
+   ✅ VENTURES INFO SECTION
+   ========================================================== */
+
+.ventures-info-wrap {
+  width: 100%;
+  margin-top: 120px;
+}
+
+.ventures-info-block {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 70px;
+  padding: 90px 0 110px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ventures-info-left {
+  position: relative;
+}
+
+.ventures-info-title {
+  font-family: "TWK Lausanne", Arial, sans-serif;
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 1.06;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin: 0;
+
+  position: relative;
+  z-index: 5; /* ✅ Title always above */
+}
+
+
+/* ✅ STRIPS BELOW TITLE */
+.ventures-strips {
+  margin-top: 26px;
+  display: flex;
+  gap: 30px;
+}
+
+/* .ventures-strip {
+  transition: transform 0.1s linear, opacity 0.25s ease;
+} */
+
+.ventures-strips-wrap {
+  margin-top: 26px;
+  height: 340px;         /* ✅ same as stripe height */
+  overflow: hidden;      /* ✅ IMPORTANT: stripes won't go above title */
+  position: relative;
+  z-index: 1;
+}
+
+.ventures-strip {
+  width: 88px;
+  height: 340px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.95)
+  );
+
+  will-change: transform;
+  transition: transform 1s linear,opacity 0.6s ease;
+}
+
+.ventures-info-right {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  padding-top: 10px;
+}
+
+.ventures-info-text {
+  font-family: "TWK Lausanne", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.92);
+  margin: 0;
+  max-width: 560px;
+}
+
+.ventures-info-highlight {
+  font-family: "TWK Lausanne", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0;
+  color: #8fd1ff;
+}
+
+/* ==========================================================
+   ✅ FOUNDER SECTION
+   ========================================================== */
+
+.ventures-founder-section {
+  padding: 130px 0 120px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ventures-founder-title {
+  font-family: "TWK Lausanne", Arial, sans-serif;
+  font-size: 60px;
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin: 0 0 70px;
+  color: #fff;
+}
+
+.ventures-founder-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 90px;
+  align-items: flex-start;
+}
+
+.ventures-founder-text {
+  font-family: "TWK Lausanne", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  max-width: 560px;
+}
+
+.ventures-founder-subtitle {
+  font-family: "TWK Lausanne", Arial, sans-serif;
+  font-size: 52px;
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  margin: 0 0 26px;
+  color: #fff;
+}
+
+.ventures-founder-list {
+  margin: 0;
+  padding-left: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  font-family: "TWK Lausanne", Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.ventures-founder-btn {
+  margin-top: 52px;
+  background: #ffffff;
+  border: none;
+  padding: 16px 28px;
+  border-radius: 14px;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+
+  color: #000;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.ventures-founder-arrow {
+  width: 28px;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================================
+   ✅ NEW: WE ONLY WIN WHEN YOU WIN SECTION
+   ========================================================== */
+
+.ventures-win-section {
+  text-align: center;
+  padding: 160px 0 120px;
+}
+
+.ventures-win-title {
+  font-size: 120px;
+  font-weight: 540;
+  letter-spacing: -0.05em;
+  line-height: 1.05;
+  margin: 0;
+  color: #fff;
+}
+
+.ventures-win-highlight {
+  color: #8fd1ff;
+}
+
+.ventures-win-subtitle {
+  margin: 34px auto 0;
+  font-family: "TWK Lausanne", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 720px;
+  text-align: center;
+}
+
+.ventures-win-btn {
+  margin-top: 46px;
+  background: #ffffff;
+  border: none;
+  padding: 16px 28px;
+  border-radius: 14px;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  color: #000;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.ventures-win-arrow {
+  width: 30px;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================================
+   ✅ VENTURES FOOTER (PALOMA STYLE BLACK)
+   ========================================================== */
+
+.ventures-footer {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  background: #000;
+  padding: 110px 0 140px;
+}
+
+/* ✅ THICK WHITE LINE ABOVE FOOTER */
+.ventures-footer-line {
+  width: 100%;
+  height: 3px;
+  background: rgb(234, 231, 231);
+  margin-bottom: 70px;
+}
+
+.ventures-footer-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.ventures-footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.4fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.ventures-footer-label {
+  font-family: "TWK Lausanne", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 18px;
+}
+
+.ventures-footer-email {
+  font-family: "TWK Lausanne", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.6;
+}
+
+.ventures-footer-link {
+  font-family: "TWK Lausanne", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.ventures-footer-link:hover {
+  opacity: 0.7;
+}
+
+.ventures-footer-location {
+  font-family: "TWK Lausanne", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ==========================================================
+   ✅ RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 1024px) {
+  .ventures-info-block {
+    grid-template-columns: 1fr;
+    padding: 70px 0 90px;
+  }
+
+  .ventures-info-title {
+    font-size: 48px;
+  }
+
+  .ventures-info-text {
+    font-size: 18px;
+    max-width: 100%;
+  }
+
+  .ventures-strip {
+    width: 60px;
+    height: 260px;
+  }
+
+  .ventures-hero-title {
+    font-size: 60px;
+  }
+
+  .ventures-win-title {
+    font-size: 60px;
+  }
+
+  .ventures-founder-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .ventures-founder-title {
+    font-size: 44px;
+  }
+
+  .ventures-founder-subtitle {
+    font-size: 32px;
+  }
+
+  .ventures-founder-text,
+  .ventures-founder-list {
+    font-size: 18px;
+  }
+
+  .ventures-footer-inner {
+    padding: 0 30px;
+  }
+
+  .ventures-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ventures-hero-title {
+    font-size: 42px;
+  }
+
+  .ventures-info-title {
+    font-size: 34px;
+  }
+
+  .ventures-info-text {
+    font-size: 16px;
+  }
+
+  .ventures-strip {
+    width: 46px;
+    height: 220px;
+  }
+
+  .ventures-founder-title {
+    font-size: 34px;
+  }
+
+  .ventures-founder-subtitle {
+    font-size: 26px;
+  }
+
+  .ventures-win-title {
+    font-size: 42px;
+  }
+
+  .ventures-win-subtitle {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+}
+
+/* ==========================================================
+   ✅ CAPITAL HERO IMAGE (PALOMA STYLE)
+   ========================================================== */
+
+.capital-hero-wrap {
+  margin-top: 26px;
+  width: 100%;
+}
+
+.capital-hero-image-wrap {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-top: 18px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.capital-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+  .capital-hero-image {
+    height: 320px;
+  }
+}
+
+
+
+/* ==========================================================
+   ✅ CAPITAL TEXT SECTION (AFTER IMAGE)
+   ✅ Capital BG color + Black text
+   ========================================================== */
+
+.capital-hero-text-section {
+  width: 100%;
+  margin-top: 90px;
+  padding-bottom: 140px;
+}
+
+.capital-hero-text-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto; /* ✅ push content to right side */
+}
+
+.capital-hero-big-title {
+  font-size: 140px;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  line-height: 1.02;
+  margin-top: 200px;
+  color: #000;
+}
+
+.capital-hero-description {
+  margin-top: 34px;
+  max-width: 760px;
+  font-size: 20px;
+  line-height: 1.7;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+/* ✅ Responsive */
+@media (max-width: 1024px) {
+  .capital-hero-big-title {
+    font-size: 80px;
+  }
+
+  .capital-hero-description {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  .capital-hero-text-inner {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .capital-hero-big-title {
+    font-size: 55px;
+  }
+
+  .capital-hero-description {
+    font-size: 15px;
+    max-width: 100%;
+  }
+}
+/* ==========================================================
+   ✅ CAPITAL ABOUT SECTION (AFTER HERO TEXT)
+   ✅ Line + Big Paragraph Text
+   ========================================================== */
+
+.capital-about-section {
+  width: 100%;
+  padding: 60px 0 140px;
+}
+
+/* ✅ Thin line on top */
+.capital-about-line {
+  width: 100%;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.25);
+  margin-bottom: 60px;
+}
+
+/* ✅ Big text like screenshot */
+.capital-about-text {
+  font-size: 56px;
+  font-weight: 300;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.88);
+  max-width: 1250px;
+}
+
+/* ✅ Responsive */
+@media (max-width: 1024px) {
+  .capital-about-text {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .capital-about-section {
+    padding: 50px 0 90px;
+  }
+
+  .capital-about-text {
+    font-size: 28px;
+    line-height: 1.35;
+  }
+}
+
+@media (max-width: 480px) {
+  .capital-about-text {
+    font-size: 22px;
+  }
+
+  .capital-about-line {
+    margin-bottom: 35px;
+  }
+}
+
+/* ==========================================================
+   ✅ CAPITAL INFO SECTION (LEFT TEXT + RIGHT IMAGE)
+   ========================================================== */
+
+.capital-info-section {
+  width: 100%;
+  padding: 60px 0;
+}
+
+.capital-info-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* ✅ LEFT SIDE */
+.capital-info-left {
+  max-width: 700px;
+}
+
+.capital-info-number {
+  width: 58px;
+  height: 46px;
+  border: 1px solid rgba(18, 7, 7, 0.905);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.capital-info-title {
+  font-size: 45px;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  margin: 0;
+  color: #000;
+}
+
+.capital-info-text {
+  margin-top: 26px;
+  font-size: 22px;
+  line-height: 1.75;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.85);
+  max-width: 650px;
+}
+
+/* ✅ RIGHT SIDE IMAGE */
+.capital-info-right {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.capital-info-image {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* ✅ Responsive */
+@media (max-width: 1024px) {
+  .capital-info-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .capital-info-title {
+    font-size: 48px;
+  }
+
+  .capital-info-text {
+    font-size: 18px;
+  }
+
+  .capital-info-right {
+    justify-content: flex-start;
+  }
+
+  .capital-info-image {
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 480px) {
+  .capital-info-section {
+    padding: 80px 0;
+  }
+
+  .capital-info-title {
+    font-size: 36px;
+  }
+
+  .capital-info-text {
+    font-size: 16px;
+  }
+
+  .capital-info-image {
+    max-width: 320px;
+  }
+}
+
+
+
+/* ==========================================================
+   ✅ CAPITAL SECTIONS 2.0 / 3.0 / 4.0 (TEXT + IMAGE)
+   ✅ NEW ADDITION (NO CHANGE TO OLD CSS)
+   ========================================================== */
+
+.capital-extra-section {
+  width: 100%;
+  padding: 0px ;
+}
+
+/* Layout same as screenshots: left text + right image */
+.capital-extra-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 90px;
+  align-items: center;
+}
+
+/* Left side */
+.capital-extra-left {
+  max-width: 760px;
+}
+
+/* Badge box (2.0 / 3.0 / 4.0) */
+.capital-extra-badge {
+  width: 60px;
+  height: 48px;
+  border: 1px solid rgba(13, 11, 11, 0.75);
+  color: #0b0909;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  margin-bottom: 20px;
+}
+
+/* Paragraph text */
+.capital-extra-text {
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 400;
+  margin: 0;
+  max-width: 760px;
+  margin-top: 26px;
+
+  color: rgba(8, 6, 6, 0.92);
+}
+
+/* Right side image */
+.capital-extra-right {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.capital-extra-right img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* ✅ Responsive */
+@media (max-width: 1024px) {
+  .capital-extra-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .capital-extra-text {
+    font-size: 20px;
+  }
+
+  .capital-extra-right {
+    justify-content: flex-start;
+  }
+
+  .capital-extra-right img {
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+  .capital-extra-section {
+    padding: 80px 0;
+  }
+
+  .capital-extra-text {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  .capital-extra-right img {
+    max-width: 320px;
+  }
+}
+
+
+/* ==========================================================
+   ✅ CAPITAL BIG CENTER TEXT SECTION
+   ========================================================== */
+
+.capital-bigtext-section {
+  width: 100%;
+  padding: 9px 0 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.capital-bigtext-title {
+  font-size: 53px;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+  margin: 0;
+  color: #0f0b0b;
+  max-width: 1400px;
+}
+
+/* ✅ Responsive */
+@media (max-width: 1024px) {
+  .capital-bigtext-title {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 768px) {
+  .capital-bigtext-section {
+    padding: 110px 0 110px;
+  }
+
+  .capital-bigtext-title {
+    font-size: 30px;
+    line-height: 1.35;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .capital-bigtext-title {
+    font-size: 22px;
+  }
+}
+
+
+/* ==========================================================
+   ✅ CAPITAL MOVING TEXT + ARROW (MARQUEE)
+   ========================================================== */
+
+.capital-marquee-section {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  overflow: hidden;
+}
+
+.capital-marquee-line {
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.capital-marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  padding: 60px 0;
+}
+
+/* ✅ track moves left */
+.capital-marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 120px;
+  width: max-content;
+  animation: capitalMarqueeMove 18s linear infinite;
+}
+
+.capital-marquee-item {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  color: #000;
+  white-space: nowrap;
+}
+
+.capital-marquee-arrow-img {
+  width: 140px;
+  height: auto;
+  display: block;
+}
+
+/* ✅ Infinite right move */
+@keyframes capitalMarqueeMove {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+
+/* ✅ Responsive */
+@media (max-width: 1024px) {
+  .capital-marquee-track {
+    gap: 90px;
+    animation-duration: 16s;
+  }
+
+  .capital-marquee-item {
+    font-size: 50px;
+    gap: 45px;
+  }
+
+  .capital-marquee-arrow-img {
+    width: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .capital-marquee-wrapper {
+    padding: 40px 0;
+  }
+
+  .capital-marquee-track {
+    gap: 70px;
+    animation-duration: 14s;
+  }
+
+  .capital-marquee-item {
+    font-size: 34px;
+    gap: 25px;
+  }
+
+  .capital-marquee-arrow-img {
+    width: 70px;
+  }
+}
+
+
+
+/* ==========================================================
+   ✅ CAPITAL FOOTER (SAME STYLE AS VENTURES FOOTER)
+   ========================================================== */
+
+
+.capital-footer {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  background: transparent;
+  padding: 90px 0 110px;
+  box-sizing: border-box;
+}
+
+
+
+/* ✅ DISABLE INNER COMPLETELY */
+.capital-footer-inner {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  max-width: none;
+}
+
+/* ✅ MAIN ALIGNMENT MUST BE HERE */
+.capital-footer-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left:60px;
+  box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns: 1.3fr 0.8fr 1.4fr;
+  gap: 150px;
+  align-items: start;
+}
+
+/* ✅ columns */
+.capital-footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* ✅ labels */
+.capital-footer-label {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.55);
+  margin: 0;
+}
+
+/* ✅ email */
+.capital-footer-email {
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: #000;
+  margin: 0;
+}
+
+/* ✅ button */
+.capital-footer-btn {
+  margin-top: 18px;
+  width: fit-content;
+  padding: 14px 26px;
+
+  border-radius: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  background: transparent;
+  cursor: pointer;
+
+  font-size: 18px;
+  font-weight: 400;
+  color: #000;
+
+  transition: all 0.25s ease;
+}
+
+.capital-footer-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(0, 0, 0, 0.04);
+}
+
+/* ✅ social links */
+.capital-footer-link {
+  font-size: 20px;
+  font-weight: 400;
+  color: #000;
+  cursor: pointer;
+  margin: 0;
+  gap:0px;
+}
+
+.capital-footer-link:hover {
+  opacity: 0.7;
+}
+
+/* ✅ address */
+.capital-footer-location-title {
+  font-size: 22px;
+  font-weight: 400;
+  color: #000;
+  margin: 10px 0 0;
+}
+
+.capital-footer-location {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000;
+  margin: 0;
+  
+}
+
+/* ✅ responsive */
+@media (max-width: 1024px) {
+  .capital-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+    padding: 0 30px;
+  }
+
+  .capital-footer-email {
+    font-size: 24px;
+  }
+
+  .capital-footer-location,
+  .capital-footer-location-title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .capital-footer {
+    padding: 70px 0 90px;
+  }
+
+  .capital-footer-grid {
+    padding: 0 18px;
+  }
+
+  .capital-footer-btn {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+}
+
+
+/* ==========================================================
+   ✅ DIGITAL FOOTER (Penultimate X)
+   ========================================================== */
+
+.footer-section {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  background: #ffffff;
+  padding: 100px 0 120px;
+  box-sizing: border-box;
+}
+
+/* line above footer */
+.footer-line-top {
+  width: 100%;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.15);
+  margin-bottom: 60px;
+}
+
+.footer-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 60px;
+  box-sizing: border-box;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.4fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* labels */
+.footer-label {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+/* big email + address */
+.footer-big {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #000;
+}
+
+/* social link */
+.footer-link {
+  font-size: 20px;
+  font-weight: 400;
+  color: #000;
+  cursor: pointer;
+}
+
+.footer-link:hover {
+  opacity: 0.7;
+}
+
+/* contact button */
+.footer-contact-btn {
+  margin-top: 18px;
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+
+  padding: 14px 26px;
+  border-radius: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  background: transparent;
+  cursor: pointer;
+
+  font-size: 18px;
+  font-weight: 400;
+  color: #000;
+
+  transition: all 0.25s ease;
+}
+
+.footer-contact-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.footer-arrow-img {
+  width: 24px;
+  height: auto;
+  display: block;
+}
+
+/* ✅ Responsive */
+@media (max-width: 1024px) {
+  .footer-inner {
+    padding: 0 30px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .footer-big {
+    font-size: 18px;
+  }
+
+  .footer-link {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-inner {
+    padding: 0 18px;
+  }
+
+  .footer-section {
+    padding: 70px 0 90px;
+  }
+
+  .footer-contact-btn {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+}
+
+
+
+

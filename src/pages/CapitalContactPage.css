@@ -1,0 +1,280 @@
+/* ✅ FULL WRAPPER */
+.capital-contact-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: #ddeee8;
+}
+
+/* ✅ CONTACT PAGE */
+.capital-contact-page {
+  width: 100%;
+  background: #ddeee8;
+  padding: 90px 0px 0px;
+  box-sizing: border-box;
+}
+
+/* ✅ INNER LAYOUT */
+.capital-contact-inner {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0px 90px;
+  box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 90px;
+  align-items: start;
+}
+
+/* ✅ LEFT SIDE */
+.capital-contact-left {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.capital-contact-title {
+  font-size: 72px;
+  font-weight: 500;
+  color: #000;
+  margin: 0;
+  line-height: 1.05;
+  letter-spacing: -1px;
+}
+
+/* ✅ RIGHT SIDE */
+.capital-contact-right {
+  width: 100%;
+}
+
+/* ✅ FORM */
+.capital-form {
+  width: 100%;
+}
+
+.capital-form-row {
+  display: flex;
+  gap: 55px;
+  margin-bottom: 40px;
+}
+
+.capital-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.capital-field-wide {
+  flex: 1;
+  width: 100%;
+}
+
+.capital-field label {
+  font-size: 20px;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 14px;
+}
+
+.capital-field label span {
+  color: red;
+}
+
+.capital-field input {
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.55);
+  background: transparent;
+  outline: none;
+
+  padding: 14px 0px;
+  font-size: 16px;
+  color: #000;
+}
+
+/* ✅ RADIO OPTIONS */
+.capital-group-title {
+  margin-bottom: 14px;
+}
+
+.capital-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 5px;
+}
+
+.capital-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  color: #000;
+}
+
+/* ✅ PRIVACY TEXT */
+.capital-privacy-text {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.75);
+  line-height: 1.6;
+  margin: 0 0 18px 0;
+}
+
+.capital-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #000;
+}
+
+/* ✅ BUTTONS */
+.capital-submit-btn {
+  width: 220px;
+  padding: 14px 18px;
+  border-radius: 30px;
+  border: 2px solid #000;
+  background: transparent;
+  color: #000;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.capital-submit-btn:hover {
+  background: #000;
+  color: #ddeee8;
+}
+
+.capital-back-btn {
+  opacity: 0.9;
+}
+
+/* ✅ LINE ABOVE FOOTER */
+.capital-footer-line {
+  width: 100%;
+  height: 2px;
+  background: rgba(19, 18, 18, 0.9);
+  margin-top: 80px;
+}
+
+/* ✅ FOOTER */
+.capital-footer {
+  width: 100%;
+  background: #ddeee8;
+  padding: 50px 0px 0px;
+  box-sizing: border-box;
+}
+
+/* ✅ FOOTER INNER GRID */
+.capital-footer-inner {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0px 0px;
+  box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.3fr;
+  gap: 140px;
+  align-items: start;
+}
+
+/* ✅ SMALL HEADINGS */
+.capital-footer-heading {
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(16, 12, 12);
+  margin-bottom: 24px;
+}
+
+/* ✅ EMAIL TEXT */
+.capital-footer-mail {
+  font-size: 26px;
+  font-weight: 500;
+  margin: 0px;
+  color: #0c0a0a;
+}
+
+/* ✅ SOCIAL LINKS */
+.capital-footer-link {
+  font-size: 22px;
+  font-weight: 500;
+  color: #0b0a0a;
+  margin: 14px 0px;
+  cursor: pointer;
+  transition: opacity 0.25s ease;
+}
+
+.capital-footer-link:hover {
+  opacity: 0.7;
+}
+
+/* ✅ LOCATION TEXT */
+.capital-footer-text {
+  font-size: 22px;
+  font-weight: 500;
+  color: #100f0f;
+  margin: 14px 0px;
+  line-height: 1.7;
+}
+
+/* ✅ RESPONSIVE */
+@media (max-width: 1100px) {
+  .capital-contact-inner {
+    padding: 0px 40px;
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .capital-contact-title {
+    font-size: 55px;
+  }
+
+  .capital-footer-inner {
+    padding: 0px 40px;
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .capital-footer-link,
+  .capital-footer-text {
+    font-size: 18px;
+  }
+
+  .capital-footer-mail {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .capital-contact-page {
+    padding: 60px 0px 0px;
+  }
+
+  .capital-contact-inner {
+    padding: 0px 18px;
+  }
+
+  .capital-form-row {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .capital-contact-title {
+    font-size: 44px;
+  }
+
+  .capital-footer-inner {
+    padding: 0px 18px;
+  }
+
+  .capital-footer-link,
+  .capital-footer-text {
+    font-size: 16px;
+  }
+
+  .capital-footer-mail {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,146 @@
+.ventures-contact-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+}
+
+.ventures-contact-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 140px 60px 120px;
+  display: grid;
+  grid-template-columns: 1.1fr 1.4fr;
+  gap: 90px;
+}
+
+/* LEFT */
+.ventures-contact-title {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 68px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin: 0;
+}
+
+/* FORM */
+.ventures-form {
+  width: 100%;
+}
+
+.ventures-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 38px;
+}
+
+.ventures-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ventures-field-wide {
+  grid-column: 1 / -1;
+}
+
+.ventures-field label {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.ventures-field label span {
+  color: #ff4d4d;
+  margin-left: 2px;
+}
+
+.ventures-field input,
+.ventures-field textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+  padding: 12px 0px;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.ventures-field textarea {
+  min-height: 120px;
+  resize: none;
+  padding-top: 18px;
+}
+
+.ventures-group-title {
+  margin-bottom: 12px;
+}
+
+.ventures-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ventures-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.ventures-option input {
+  width: 14px;
+  height: 14px;
+}
+
+.ventures-file {
+  border: none !important;
+  padding: 0 !important;
+}
+
+/* Submit Button */
+.ventures-submit-btn {
+  justify-self: start;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #fff;
+  padding: 14px 26px;
+  border-radius: 999px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.ventures-submit-btn:hover {
+  border-color: rgba(255, 255, 255, 0.8);
+  transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .ventures-contact-inner {
+    grid-template-columns: 1fr;
+    padding: 120px 30px 100px;
+    gap: 50px;
+  }
+
+  .ventures-form-row {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .ventures-contact-title {
+    font-size: 46px;
+  }
+}
+.ventures-contact-wrapper {
+  background: #000;
+  min-height: 100vh;
+}
+

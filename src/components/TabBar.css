@@ -1,107 +1,147 @@
-/* 🔸 Top Orange Header Bar */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* ✅ TOP HEADER BAR */
 .top-bar {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end; 
-  padding: 10px 40px 0;   
+  align-items: flex-end;
+
+  /* ✅ left padding removed so active tab touches full left like Paloma */
+  padding: 0px 22px 0px 0px;
+
   position: sticky;
   top: 0;
   z-index: 100;
-  height: 55px;           
+  height: 56px;
   transition: background-color 0.4s ease;
-  flex-wrap: wrap;
 }
 
-.tab-logo {
-  height: 75px; 
-  width: 160px; 
-  object-fit: contain;
-  transition: transform 0.3s ease, filter 0.3s ease;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-  filter: brightness(1.15) contrast(1.1); 
-}
-
-/* Optional hover effect */
-.tab-btn:hover .tab-logo {
-  transform: scale(1.05);
-}
-
-
-/* 🔹 Left side (three tabs) */
+/* ✅ LEFT SIDE TABS */
 .tabs-left {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   height: 100%;
-  margin-left:-40px;
-  /* gap: 20px; */
-  flex-wrap: wrap;
+  gap: 10px;
+  margin-left: 0px;
 }
-.tabs-right{
 
-}
-/* Each tab (Paloma Digital / Ventures / Capital) */
+/* ✅ TAB BUTTON */
 .tab-btn {
   border: none;
   background: transparent;
-  color: white;
-  font-size: 15px;
-  font-weight: 500;
   cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  height: 44px;
+  padding: 0px 16px;
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  transition: all 0.25s ease;
+}
+
+/* ✅ FIX: First tab must touch left side perfectly like Paloma */
+.tabs-left .tab-btn:first-child {
+  margin-left: 0px;
+  padding-left: 22px;
+  border-top-left-radius: 0px;
+}
+
+/* ✅ FIX: First active tab also flush left */
+.tabs-left .tab-btn:first-child.active {
+  border-top-left-radius: 0px;
+}
+
+/* ✅ Logo should always be ORIGINAL COLOR */
+.tab-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  border-radius: 6px;
+
+  /* ✅ remove grayscale/fade */
+  filter: none;
+  opacity: 1;
+}
+
+/* ✅ TITLE (same font style like your screenshot) */
+.tab-title {
+  font-size: 18px;
+  font-weight: 700;
+  white-space: nowrap;
+  font-family: "Playfair Display", serif !important;
+  letter-spacing: 0.2px;
+}
+
+/* ✅ Blue "Penultimate" */
+.tab-title-blue {
+  color: #0b52c0;
+}
+
+/* ✅ Black remaining word */
+.tab-title-black {
+  color: #111;
+}
+
+/* ✅ ACTIVE TAB = SAME AS PAGE BACKGROUND COLOR */
+.tab-btn.active {
+  background: var(--tabActiveBg);
+}
+
+/* ✅ Active remaining word follows page text color */
+.tab-btn.active .tab-title-black {
+  color: var(--tabActiveText) !important;
+}
+
+/* ✅ REMOVE HOVER EFFECT COMPLETELY */
+.tab-btn:hover {
+  background: transparent !important;
+}
+
+.tab-btn:hover .tab-icon {
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+.tab-btn:hover .tab-title-blue,
+.tab-btn:hover .tab-title-black {
+  color: inherit !important;
+}
+
+/* ✅ Right side hamburger */
+.tabs-right {
   display: flex;
   align-items: center;
   height: 100%;
-  padding: 0px 20px;
-  transition: all 0.3s ease;
-  /* border-bottom: 3px solid transparent;  */
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  padding-bottom: 8px;
 }
 
-/* Hover effect for tabs */
-.tab-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-/* Active tab styling */
-.tab-btn.active {
-  font-weight: 600;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Small colored icon before each title */
-.tab-icon {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  margin-right: 8px;
-}
-
-/* Right side (Hamburger Button) */
 .hamburger {
-  width: 30px;
-  height: 30px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   background: black;
   border: none;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 4px;
+
   cursor: pointer;
   transition: background 0.3s ease;
-  position: relative;
-  top: -9px; 
-  right: -30px;
 }
 
 .hamburger:hover {
-  background: #222;
+  background: black; /* ✅ no hover change */
 }
 
-/* Hamburger bars */
 .bar {
   width: 18px;
   height: 2px;
@@ -109,219 +149,81 @@
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Hamburger to cross animation */
 .hamburger.open .bar1 {
   transform: translateY(5px) rotate(45deg);
 }
-
 .hamburger.open .bar2 {
   opacity: 0;
 }
-
 .hamburger.open .bar3 {
   transform: translateY(-5px) rotate(-45deg);
 }
 
-/* Default: Desktop only */
-.desktop-logo {
-  display: block;
-}
-
-.mobile-logo {
-  display: none;
-  width: 70px;
-  height: auto;
-}
-
-
-/* 🔸 RESPONSIVENESS */
-
-/* Large Tablets / Small Laptops */
-@media (max-width: 1200px) {
-  .tab-logo {
-    width: 150px;
-    height: auto;
-  }
-  .tab-btn {
-    padding: 0 12px;
-  }
-}
-
-/* Tablets (768px–1024px) */
+/* ✅ RESPONSIVE */
 @media (max-width: 1024px) {
   .top-bar {
-    padding: 8px 24px;
-    height: 55px;
-  }
-
-  .tabs-left {
-    gap: 10px;
-    margin-left: 0;
-  }
-
-  .tab-logo {
-    width: 140px;
-    height: auto;
+    padding: 0px 14px 0px 0px;
   }
 
   .tab-btn {
-    font-size: 14px;
-    padding: 0 10px;
+    padding: 0px 12px;
+    height: 42px;
   }
 
-  .hamburger {
-    width: 38px;
-    height: 38px;
+  .tabs-left .tab-btn:first-child {
+    padding-left: 14px;
   }
-   .desktop-logo {
-    width: 120px;
+
+  .tab-title {
+    font-size: 16px;
   }
 }
 
-/* Mobile (<=768px) */
+/* ✅ Mobile: show only icons */
 @media (max-width: 768px) {
-  .top-bar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 0px;
-    height: 90px;
-    min-height: 90px;
-    flex-wrap: nowrap;
-
-  }
-
   .tabs-left {
     flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    /* gap: 6px; */
-    margin: 0;
-    flex-shrink: 1;
     overflow-x: auto;
     scrollbar-width: none;
-    padding-left: 4px;
-    /* margin-bottom: -12px; */
-    /* margin-top: 20px; */
+    gap: 8px;
   }
 
   .tabs-left::-webkit-scrollbar {
     display: none;
+  }
+
+  .tab-title {
+    display: none;
+  }
+
+  .tab-btn {
+    padding: 0px 12px;
+    gap: 0px;
+  }
+
+  .tabs-left .tab-btn:first-child {
+    padding-left: 12px;
   }
 
   .tabs-right {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-shrink: 0;
-    margin-left: 8px;
-    position: relative;
-    height: 100%;
-  }
-
-  .tab-logo {
-    width: 80px;
-    height: auto;
-  }
-
-  .tab-btn {
-    height: 120%;
-    padding: 0 6px;
-    white-space: nowrap;
-     margin-top: 0px;
-     display: flex;
-     align-items: center;
-     transform: translateY(2px);
+    padding-bottom: 6px;
   }
 
   .hamburger {
-    width: 34px;
-    height: 34px;
-    top: 0;
-    position: relative;
-    right: 0; 
-    margin-left: 8px;
-  }
-
-  .bar {
-    width: 14px;
-    height: 2px;
-  }
-  .desktop-logo {
-    display: none;
-  }
-
-  .mobile-logo {
-    display:block;
-    width: 80px;
-    height: auto;
-  }
- .mobile-logo.tab-1,
-.mobile-logo.tab-2 {
-  width: 110px !important;
-  height: auto !important;
-}
-
-.tab-btn.active .tab-logo.tab-2 {
-  width: 100px !important;
-  height: auto !important;
-  margin-left: -10px;
-}
-.tab-btn.active .tab-logo.tab-1 {
-  width: 80px !important;
-  height: auto !important;
-}
-}
-/* Small Mobile (<=480px) */
-@media (max-width: 480px) {
-  .top-bar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 6px 10px;
+    width: 36px;
     height: 36px;
-    min-height: 36px;
-    box-sizing: border-box;
   }
+}
 
-  .tabs-left {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 6px;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scrollbar-width: none;
-    margin-left: 0;
-    padding-left: 4px;
-  }
+/* ✅ IMPORTANT: override global poppins (if exists) */
+.top-bar .tab-btn .tab-title,
+.top-bar .tab-btn .tab-title-blue,
+.top-bar .tab-btn .tab-title-black {
+  font-family: "Playfair Display", serif !important;
+}
 
-  .tabs-left::-webkit-scrollbar {
-    display: none;
-  }
-
-  .tab-logo {
-    width: 70px;
-    height: auto;
-    flex: 0 0 auto;
-    margin-bottom: 0px;
-  }
-
-  .tab-btn {
-    font-size: 12px;
-    padding: 0 6px;
-  }
-
-  .hamburger {
-    width: 32px;
-    height: 32px;
-    flex: 0 0 auto;
-    margin-left: 8px;
-    position: relative;
-    top: 0;
-  }
+/* ✅ ✅ ONLY on Capital page (tab-2): make "Penultimate" of X and Ventures WHITE */
+.top-bar.tab-2 .tab-btn.tab-0 .tab-title-blue,
+.top-bar.tab-2 .tab-btn.tab-1 .tab-title-blue {
+  color: #ffffff !important;
 }

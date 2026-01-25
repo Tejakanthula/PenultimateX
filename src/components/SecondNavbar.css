@@ -1,92 +1,90 @@
 .second-navbar {
   width: 100%;
-  height: 50px;
-  padding: 14px 100px;
-  position: sticky;
-  top: 70px;
-  z-index: 90;
+  height: 110px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: background-color 0.4s ease, color 0.4s ease;
-  align-items: center;
-  
+
+  padding: 0px 70px;
+  box-sizing: border-box;
 }
 
-.nav-logo.tab-0 {
-  height: 120px;
-  margin-top: 50px;
-  margin-left: -80px;
-}
-.nav-logo.tab-1{
-  height: 120px;
-  margin-top: 50px;
-  margin-left: -80px;
-}
-
-.nav-logo.tab-2 {
-  height: 120px;
-  margin-top: 50px;
- margin-left: -75px;
-}
-
-.navbar-left {
+/* ✅ LEFT LOGO */
+.second-navbar-left {
   display: flex;
   align-items: center;
 }
 
-.navbar-right ul {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-}
-/* Only for Penultimate X (tab 0) — move buttons down */
-.second-navbar.tab-0 .navbar-right ul {
-  margin-top: 90px;
-}
-.second-navbar.tab-1 .navbar-right ul{
-  margin-top: 90px;
+.second-navbar-logo {
+  height: 160px;
+  width: auto;
+  object-fit: contain;
 }
 
-.second-navbar.tab-2 .navbar-right ul {
-  margin-top: 100px;
-}
-.navbar-right {
-  text-decoration: none;
-  transition: color 0.3s ease;
+/* ✅ RIGHT MENU LINKS (like Paloma) */
+.second-navbar-right {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 55px; /* ✅ spacing like your 2nd pic */
 }
-.nav-btn{
-  background: none;
+
+/* ✅ LINKS STYLE */
+.second-navbar-link {
+  background: transparent;
   border: none;
+  outline: none;
   cursor: pointer;
-  font-size: 16px; 
-  font-weight: 500;
-}
- .nav-btn:hover {
-  color: #111111;
+
+  font-size: 18px;
+  font-weight: 400;
+  color: #111;
+
+  padding: 0px;
+  margin: 0px;
+
+  transition: opacity 0.2s ease;
 }
 
+.second-navbar-link:hover {
+  opacity: 0.7;
+}
+
+/* ✅ RESPONSIVE */
+@media (max-width: 1024px) {
+  .second-navbar {
+    padding: 0px 30px;
+    height: 90px;
+  }
+
+  .second-navbar-right {
+    gap: 35px;
+  }
+
+  .second-navbar-link {
+    font-size: 16px;
+  }
+
+  .second-navbar-logo {
+    height: 55px;
+  }
+}
 
 @media (max-width: 768px) {
   .second-navbar {
-    flex-direction: column;
-    height: auto;
-    padding: 10px 20px;
-    align-items: flex-start;
+    padding: 0px 18px;
+    height: 80px;
   }
 
-  .nav-logo {
-    height: 60px;
-    margin-bottom: 8px;
+  .second-navbar-right {
+    gap: 18px;
   }
 
-  .navbar-right ul {
-    display: none; /* hide the menu links */
+  .second-navbar-link {
+    font-size: 14px;
+  }
+
+  .second-navbar-logo {
+    height: 45px;
   }
 }
